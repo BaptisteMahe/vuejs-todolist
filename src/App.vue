@@ -1,10 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <Todo todo="Faire les courses" />
+  <Todo todo="Faire le tuto Vue" />
+  <Todo todo="Faire une liste de Todo" />
 </template>
 
 <script>
+import Todo from "./components/Todo.vue";
+
 export default {
   name: "App",
+  components: {
+    Todo,
+  },
 };
 </script>
 
