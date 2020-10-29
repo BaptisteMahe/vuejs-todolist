@@ -1,24 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <Todo v-for="todo in todos" :key="todo" v-bind:todo="todo" />
+  <TodoList />
 </template>
 
 <script>
-import Todo from "./components/Todo.vue";
+import TodoList from "./components/TodoList.vue";
 
 export default {
   name: "App",
   components: {
-    Todo,
-  },
-  data() {
-    return {
-      todos: [
-        "Faire les courses",
-        "Faire le tuto Vue",
-        "Faire une liste de Todo",
-      ],
-    };
+    TodoList,
   },
 };
 </script>
