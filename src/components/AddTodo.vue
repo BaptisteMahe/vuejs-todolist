@@ -12,12 +12,17 @@ export default {
   name: "AddTodo",
   methods: {
     onSubmit: function () {
-      console.log(this.todo);
+      if (!(this.todo === '')) {
+        this.$emit('add-to-do', this.todo);
+        this.todo = '';
+      } else {
+        console.log('There is no todo to add');
+      }
     },
   },
   data() {
     return {
-      todo: "",
+      todo: '',
     };
   },
 };
