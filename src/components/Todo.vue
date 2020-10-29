@@ -41,4 +41,8 @@ button {
   border-width: 3px;
   background-color: rgb(255, 202, 202);
 }
+
+p {
+  margin: 5px;
+}
 </style>
