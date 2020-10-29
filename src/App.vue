@@ -1,7 +1,9 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <AddTodo />
-  <TodoList />
+  <AddTodo
+    v-on:add-to-do="addToDo"
+  />
+  <TodoList v-bind:todos="todos"/>
 </template>
 
 <script>
@@ -13,6 +15,20 @@ export default {
   components: {
     AddTodo,
     TodoList,
+  },
+  methods: {
+    addToDo: function (todo) {
+      this.todos.push(todo);
+    }
+  },
+  data() {
+    return {
+      todos: [
+        "Faire les courses",
+        "Faire le tuto Vue",
+        "Faire une liste de Todo",
+      ],
+    };
   },
 };
 </script>
