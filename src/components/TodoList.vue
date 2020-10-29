@@ -12,8 +12,14 @@ export default {
   components: {
     Todo,
   },
-  props: {
-    todos: Array
+  data() {
+    return {
+      todos: [
+        "Faire les courses",
+        "Faire le tuto Vue",
+        "Faire une liste de Todo",
+      ],
+    };
   }
 };
 </script>

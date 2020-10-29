@@ -3,7 +3,7 @@
   <AddTodo
     v-on:add-to-do="addToDo"
   />
-  <TodoList v-bind:todos="todos"/>
+  <TodoList ref="todoListComp"/>
 </template>
 
 <script>
@@ -18,18 +18,9 @@ export default {
   },
   methods: {
     addToDo: function (todo) {
-      this.todos.push(todo);
+      this.$refs.todoListComp.todos.push(todo);
     }
-  },
-  data() {
-    return {
-      todos: [
-        "Faire les courses",
-        "Faire le tuto Vue",
-        "Faire une liste de Todo",
-      ],
-    };
-  },
+  }
 };
 </script>
 
