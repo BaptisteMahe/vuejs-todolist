@@ -1,8 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <Todo todo="Faire les courses" />
-  <Todo todo="Faire le tuto Vue" />
-  <Todo todo="Faire une liste de Todo" />
+  <Todo v-for="todo in todos" :key="todo" v-bind:todo="todo" />
 </template>
 
 <script>
@@ -12,6 +10,15 @@ export default {
   name: "App",
   components: {
     Todo,
+  },
+  data() {
+    return {
+      todos: [
+        "Faire les courses",
+        "Faire le tuto Vue",
+        "Faire une liste de Todo",
+      ],
+    };
   },
 };
 </script>
